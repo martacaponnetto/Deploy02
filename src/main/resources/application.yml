@@ -1,12 +1,21 @@
-server:
-  port: 5000
+spring:
+  config:
+    activate:
+      on-profile: prod
 
----
-environment: prod
 server:
   port: 7070
 
 ---
-environment: test
+
+server:
+  port: 5000
+
+---
+
+spring:
+  config:
+    activate:
+      on-profile: test
 server:
   port: 4000
